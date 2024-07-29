@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner{
+            background-color: lightsalmon;/*coloquei para fins de facilitar a compreensão do que aparece para nós, em qual "profundidade" está o div.conteiner que é o conteiner pai, ou seja, aqui que vamos colocar a flex, ele está atrás, no fundo das demais div filhas (div.item)*/
+
+            display: flex;/*Aqui tornei o div.conteiner flexível*/
+        }
+
+        div.item{
+            background-color: lightblue;/*coloquei cor para facilitar a compreensão do exercício*/
+            border: 1px solid black;/*Coloquei cor para facilitar a compreensão do exercício.*/
+
+            flex: auto; /*Esse 'flex: auto;' é para fazer com que os filhos (ou div.item) preencham a div.pai*/
+
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner"><!--Essa é a div pai, aqui que vai o display flex.-->
+        <div class="item">A</div><!--div filha-->
+        <div class="item">B</div><!--div filha-->
+        <div class="item">C</div><!--div filha-->
+        <div class="item">D</div><!--div filha-->
+        <div class="item">E</div><!--div filha-->
+        <div class="item">F</div><!--div filha-->
+        <div class="item">G</div><!--div filha-->
+    </div>
+    
+</body>
+</html>
