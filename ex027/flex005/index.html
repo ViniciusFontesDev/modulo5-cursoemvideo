@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox centralizado</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: lightsalmon;
+        }
+
+        main{/*CONTEINER PAI*/
+            background-color: lightgreen;
+            /*Aqui estou falando para o main, que é o pai, ocupar totalmente a tela do html e do body (lembrando que no '*' eu zerei margin, padding e box-sizing). DESSA FORMA, ele ocupando 100% da tela (100vh e 100vw), quando eu consigo centralizar certinho a section. LEMBRANDO QUE, o filho vai ser centralizado no pai. Se eu alterar a altura desse main pra, por exemplo 50vh, a section vai se manter centralizada, entre o 50vh(vertical) e o 100vw(horizontal).*/
+            height: 100vh;
+            width: 100vw;
+
+            display: flex;/*Por este ser o pai, é aqui que coloco o display flex*/
+            flex-flow: row nowrap;/*alinhar o eixo principal da esquerda para a direita em linha reta && não quebrar*/
+            justify-content: center;/*Centralizar horizontalmente, tendo em vista que a "flex-direction: row;"*/
+            align-items: center;/*Centralizar verticalmente, tendo em vista que a "flex-direction: row."*/
+        }
+
+        section{
+            background-color: lightblue;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Tela de Login</h1>
+        </section>
+    </main>
+    
+</body>
+</html>
